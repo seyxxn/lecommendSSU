@@ -1,31 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../components/Button";
+import Button2 from "../components/Button2";
 
-function ButtonContainer() {
+function ButtonContainer2() {
   return (
     <>
       <div className="buttonContainer">
         <Link
-          to="/recommend"
+          to="/realtimecongetsion"
           style={{
             textDecoration: "none",
             cursor: "pointer",
           }}
         >
-          <Button serviceName="📖 도서 추천 서비스 바로가기"></Button>
+          <Button2 className="" serviceName="실시간 혼잡도 확인하기"></Button2>
         </Link>
         <Link
-          to="/congestion"
+          to="/dayandmonthcongestion"
           style={{
             textDecoration: "none",
             cursor: "pointer",
           }}
         >
-          <Button serviceName="🏫 혼잡도 서비스 바로가기"></Button>
+          <Button2 serviceName="요일·시간별 혼잡도 확인하기"></Button2>
         </Link>
       </div>
     </>
   );
 }
-export default ButtonContainer;
+export default ButtonContainer2;
