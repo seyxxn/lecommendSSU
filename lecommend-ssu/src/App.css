@@ -1,0 +1,291 @@
+/* reset.css */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS REEST finish*/
+
+/* Footer */
+.footer {
+  height: 330px;
+  background-color: #f4f4f4;
+  padding-top: 72px;
+}
+
+.footerBox {
+  width: 50vw;
+  margin: auto;
+  display: block;
+}
+
+.contact {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.23;
+  color: #5f5f5f;
+  padding-bottom: 10px;
+}
+
+.contactInfo {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #5f5f5f;
+  padding-bottom: 6px;
+}
+
+/* NavBar */
+
+.topBar {
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 2px 0 0 #f4f4f4;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logoAndMenu {
+  height: 74px;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.icon,
+.title {
+  float: left;
+}
+
+.title {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.menuContainer {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.menuList {
+  font-size: 20px;
+  color: #333333;
+  font-weight: 500;
+  margin: 20px;
+  word-break: keep-all;
+  line-height: 1.5em;
+}
+
+.menuList:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.25s;
+}
+.menuList:active {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1030px) {
+  .icon {
+    display: none;
+    visibility: hidden;
+  }
+  .menuList {
+    font-size: 1em;
+  }
+}
+
+/* Home */
+.main {
+  width: 50vw;
+  margin: auto;
+  display: block;
+  word-break: keep-all;
+  line-height: 2em;
+}
+
+.intro {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.subIntro {
+  font-size: 15px;
+  color: #5f5f5f;
+  margin-top: 22px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* button container */
+.buttonContainer {
+  padding-top: 30px;
+  height: 50vh;
+}
+
+.serviceButton {
+  width: 50vw;
+  height: 20vh;
+  /* background-color: #006e93; */
+  color: #fff;
+  font-size: 1em;
+  margin: auto;
+  display: block;
+  margin-bottom: 30px;
+  border: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+  background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
+  background-size: 400% 400%;
+  animation: gradient1 10s ease infinite;
+  color: white;
+  border-radius: 15px;
+}
+
+.serviceButton:active {
+  transform: scale(1.2);
+}
+
+.serviceButton:hover {
+  background-color: #02a6cb;
+  cursor: pointer;
+}
+
+@keyframes gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
