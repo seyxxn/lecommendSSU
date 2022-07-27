@@ -13,7 +13,7 @@ function ButtonContainer() {
             cursor: "pointer",
           }}
         >
-          <Button serviceName="📖 도서 추천 서비스 바로가기"></Button>
+          <Button serviceName="📖 도서 추천 서비스"></Button>
         </Link>
         <Link
           to="/congestion"
@@ -22,7 +22,7 @@ function ButtonContainer() {
             cursor: "pointer",
           }}
         >
-          <Button serviceName="🏫 혼잡도 서비스 바로가기"></Button>
+          <Button serviceName="🏫 혼잡도 서비스"></Button>
         </Link>
       </div>
     </>

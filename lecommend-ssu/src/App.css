@@ -355,7 +355,7 @@ BUTTON
     line-height: 1.8em;
   }
   .subIntro {
-    font-size: calc(0.45em + 1vw);
+    font-size: calc(0.4em + 1vw);
     margin-top: 15px;
     line-height: 1.5em;
     word-break: keep-all;
