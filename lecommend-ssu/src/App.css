@@ -124,7 +124,22 @@ table {
   border-spacing: 0;
 }
 
-/* CSS REEST finish*/
+/* CSS REEST finish */
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 20%; /* 스크롤바의 길이 */
+  background: #02a6cb; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, 0.1);
+}
 
 /* Footer */
 .footer {
@@ -170,6 +185,7 @@ table {
   height: 74px;
   width: 50vw;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto;
@@ -188,9 +204,9 @@ table {
 }
 
 .menuContainer {
-  list-style: none;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  /* align-items: center; */
 }
 
 .menuList {
@@ -211,36 +227,26 @@ table {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 1030px) {
-  .icon {
-    display: none;
-    visibility: hidden;
-  }
-  .menuList {
-    font-size: 1em;
-  }
-}
-
 /* Home */
 .main {
   width: 50vw;
   margin: auto;
   display: block;
   word-break: keep-all;
-  line-height: 2em;
 }
 
 .intro {
-  font-size: 20px;
+  font-size: calc(0.5em + 1vw);
   font-weight: 700;
   margin-top: 50px;
+  line-height: 2em;
 }
 
 .subIntro {
-  font-size: 15px;
+  font-size: calc(0.3em + 1vw);
   color: #5f5f5f;
   margin-top: 22px;
-  line-height: 1.6;
+  line-height: 1.5em;
   word-break: keep-all;
 }
 
@@ -325,3 +331,33 @@ table {
 /* <button class="w-btn-outline w-btn-blue-outline" type="button">
 BUTTON
 </button> */
+
+/* 화면 축소 */
+@media screen and (max-width: 1030px) {
+  .icon {
+    display: none;
+    /* visibility: hidden; */
+  }
+  .menuList {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 모바일 */
+  .menuList {
+    display: none;
+  }
+
+  .intro {
+    font-size: calc(0.75em + 1vw);
+    margin-top: 30px;
+    line-height: 1.8em;
+  }
+  .subIntro {
+    font-size: calc(0.45em + 1vw);
+    margin-top: 15px;
+    line-height: 1.5em;
+    word-break: keep-all;
+  }
+}
