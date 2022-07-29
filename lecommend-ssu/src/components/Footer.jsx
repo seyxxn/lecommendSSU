@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footerBox">
         <div className="contact">땅벤져스</div>
         <div className="contactInfo">
@@ -13,7 +13,7 @@ function Footer() {
           20201841 컴퓨터학부 박세연<br></br>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 export default Footer;
