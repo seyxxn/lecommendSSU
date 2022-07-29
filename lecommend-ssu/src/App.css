@@ -332,6 +332,61 @@ body::-webkit-scrollbar-track {
 BUTTON
 </button> */
 
+/* 페이지 내용  */
+.content {
+  font-size: calc(0.5em + 1vw);
+  color: #313131;
+  margin-top: 22px;
+  line-height: 1.5em;
+  word-break: keep-all;
+  margin-bottom: 40px;
+}
+
+.content-title {
+  text-align: center;
+}
+
+.content-small {
+  font-size: 5px;
+  color: #ccc;
+  text-align: right;
+}
+
+.content span {
+  font-size: calc(0.8em + 1vw);
+  font-weight: 700;
+  color: #006e93;
+}
+
+/* 실시간 혼잡도 */
+.progress {
+  margin: 20px;
+  display: block;
+  margin: auto;
+  width: 50vw;
+  height: 7vh;
+  appearance: none;
+  padding: 8px;
+}
+.progress::-webkit-progress-bar {
+  background: #f0f0f0;
+  border-radius: 50px;
+  box-shadow: inset 3px 3px 10px #ccc;
+}
+
+.progress::-webkit-progress-value {
+  border-radius: 50px;
+  background: #62c6c4;
+  background: -webkit-linear-gradient(to right, #02a6cb, #006e93);
+  background: linear-gradient(to right, #02a6cb, #006e93);
+}
+
+.libImg {
+  display: block;
+  margin: auto;
+  width: 50vw;
+}
+
 /* 화면 축소 */
 @media screen and (max-width: 1030px) {
   .icon {

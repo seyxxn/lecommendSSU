@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Recommend from "./pages/Recommend";
 import Congestion from "./pages/Congestion";
+import RealTimeCongestion from "./pages/RealTimeCongestion";
+import DayAndMonthCongestion from "./pages/DayAndMonthCongestion";
 
 class app extends Component {
   render() {
@@ -16,6 +18,16 @@ class app extends Component {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/recommend" element={<Recommend />} />
           <Route exact path="/congestion" element={<Congestion />} />
+          <Route
+            exact
+            path="/realtimecongetsion"
+            element={<RealTimeCongestion />}
+          />
+          <Route
+            exact
+            path="/dayandmonthcongestion"
+            element={<DayAndMonthCongestion />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
