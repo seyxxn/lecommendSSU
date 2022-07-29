@@ -392,6 +392,22 @@ BUTTON
   margin: 10px;
 }
 
+/* 셀렉트 박스 */
+select {
+  width: 15vw;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+select::-ms-expand {
+  display: none;
+}
+
 /* 화면 축소 */
 @media screen and (max-width: 1030px) {
   .icon {
