@@ -8,8 +8,8 @@ import {
 } from "../asserts/recommendList";
 
 function Recommend() {
-  const [selectedMajor, setSelectedMajor] = useState("내 전공");
-  const [selectedGrade, setSelectedGrade] = useState("내 학번");
+  const [selectedMajor, setSelectedMajor] = useState();
+  const [selectedGrade, setSelectedGrade] = useState();
 
   const handleMajorClick = (item) => {
     setSelectedMajor(item);
@@ -18,6 +18,7 @@ function Recommend() {
   const handleGradeClick = (item) => {
     setSelectedGrade(item);
   };
+
   return (
     <div className="main">
       <div className="intro">도서 추천</div>
@@ -31,7 +32,7 @@ function Recommend() {
       </div>
       <div className="content">
         <div className="content-title">
-          학과를 선택하세요<br></br>
+          🏫 학과를 선택하세요<br></br>
           <select
             value={selectedMajor}
             onChange={(item) => handleMajorClick(item.target.value)}
@@ -42,7 +43,7 @@ function Recommend() {
           </select>
         </div>
         <div className="content-title">
-          학번을 선택하세요<br></br>
+          ✅ 학번을 선택하세요<br></br>
           <select
             value={selectedGrade}
             onChange={(item) => handleGradeClick(item.target.value)}
@@ -53,47 +54,72 @@ function Recommend() {
           </select>
         </div>
       </div>
-      💡학과별 추천 TOP 10
-      <div className="recommend">
-        {selectedMajor}의 추천 도서 TOP10 <br></br>
-        {byMajorList
-          .filter((item) => item.major === selectedMajor)
-          .map((item) => (
-            <span>
-              {item.bookList.map((bookName) => (
-                <div>{bookName}</div>
-              ))}
-            </span>
-          ))}
+
+      <div className="recommend-top-10-box">
+        <div className="recommend-title">📘 학과별 추천 TOP 10</div>
+        <div className="recommend-second-title">
+          <span>{selectedMajor}</span>의 추천 도서
+        </div>
+        <div className="recommend-content">
+          {byMajorList
+            .filter((item) => item.major === selectedMajor)
+            .map((item) => (
+              <span>
+                {item.bookList.map((bookName, index) => (
+                  <div>
+                    TOP {index + 1} : {bookName}
+                  </div>
+                ))}
+              </span>
+            ))}
+        </div>
       </div>
-      💡학번별 추천 TOP 10
-      <div className="recommend">
-        {selectedGrade}의 추천 도서 TOP10 <br></br>
-        {byGradeList
-          .filter((item) => item.grade === selectedGrade)
-          .map((item) => (
-            <span>
-              {item.bookList.map((bookName) => (
-                <div>{bookName}</div>
-              ))}
-            </span>
-          ))}
+      <div className="recommend-top-10-box">
+        <div className="recommend-title">📗학번별 추천 TOP 10</div>
+        <div className="recommend-second-title">
+          <span>{selectedGrade}</span>의 추천 도서
+        </div>
+        <div className="recommend-content">
+          {byGradeList
+            .filter((item) => item.grade === selectedGrade)
+            .map((item) => (
+              <span>
+                {item.bookList.map((bookName, index) => (
+                  <div>
+                    TOP {index + 1} : {bookName}
+                  </div>
+                ))}
+              </span>
+            ))}
+        </div>
       </div>
-      💡리코멘슈 pick! 학과·학번별 추천 자료
-      <div className="recommend">
-        {selectedMajor} {selectedGrade}의 추천 도서 TOP10 <br></br>
-        {byMajorAndGradeList
-          .filter(
-            (item) =>
-              item.grade === selectedGrade && item.major === selectedMajor
-          )
-          .map((item) => (
-            <span>
-              {item.bookList.map((bookName) => (
-                <div>{bookName}</div>
-              ))}
-            </span>
-          ))}
+      <div className="recommend-top-10-box">
+        <div className="recommend-title">
+          📙 리코멘슈 pick! 학과·학번별 추천 TOP 10
+        </div>
+
+        <div className="recommend-second-title">
+          <span>
+            {selectedMajor} {selectedGrade}
+          </span>
+          의 추천 도서
+        </div>
+        <div className="recommend-content">
+          {byMajorAndGradeList
+            .filter(
+              (item) =>
+                item.grade === selectedGrade && item.major === selectedMajor
+            )
+            .map((item) => (
+              <span>
+                {item.bookList.map((bookName, index) => (
+                  <div className="recommend-book-list">
+                    TOP {index + 1} : {bookName}
+                  </div>
+                ))}
+              </span>
+            ))}
+        </div>
       </div>
     </div>
   );

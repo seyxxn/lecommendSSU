@@ -408,6 +408,44 @@ select::-ms-expand {
   display: none;
 }
 
+/* 추천 서비스  */
+.recommend-top-10-box {
+  margin: 10px;
+}
+
+.recommend-title {
+  margin: 2px;
+  color: #313131;
+  font-weight: 500;
+  font-size: calc(0.7em + 1vw);
+  line-height: 1.8em;
+}
+.recommend-second-title {
+  font-size: calc(0.6em + 1vw);
+  margin: 20px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.recommend-second-title span {
+  font-size: calc(0.6em + 1vw);
+  font-weight: 700;
+  color: #02a6cb;
+}
+.recommend-content {
+  margin: 2px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  font-size: calc(0.4em + 1vw);
+  padding: 20px;
+  letter-spacing: 0.5px;
+  line-height: 2em;
+  word-break: break-all;
+}
+.recommend-book-list {
+  margin: 10px;
+}
+
 /* 화면 축소 */
 @media screen and (max-width: 1030px) {
   .icon {
