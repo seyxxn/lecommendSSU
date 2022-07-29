@@ -387,6 +387,11 @@ BUTTON
   width: 50vw;
 }
 
+/* 요일시간별 혼잡도 */
+.day-month-congestion {
+  margin: 10px;
+}
+
 /* 화면 축소 */
 @media screen and (max-width: 1030px) {
   .icon {
