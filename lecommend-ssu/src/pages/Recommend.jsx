@@ -8,8 +8,8 @@ import {
 } from "../asserts/recommendList";
 
 function Recommend() {
-  const [selectedMajor, setSelectedMajor] = useState();
-  const [selectedGrade, setSelectedGrade] = useState();
+  const [selectedMajor, setSelectedMajor] = useState("컴퓨터학부");
+  const [selectedGrade, setSelectedGrade] = useState("20학번");
 
   const handleMajorClick = (item) => {
     setSelectedMajor(item);
