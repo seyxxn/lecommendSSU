@@ -21,10 +21,12 @@ function predictCongestion() {
       <div className="content">
         <div className="content-title">내일의 혼잡도는?</div>
         <div className="content-title date">{tomorrow}</div>
-        <div className="predictCongestionTime notCongestion"> 13 </div>
-        <div className="predictCongestionTime notCongestion"> 14 </div>
-        <div className="predictCongestionTime mostCongestion"> 15 </div>
-        <div className="predictCongestionTime notCongestion"> 16 </div>
+        <div className="predictCongestionTime-container">
+          <div className="predictCongestionTime notCongestion"> 13 </div>
+          <div className="predictCongestionTime notCongestion"> 14 </div>
+          <div className="predictCongestionTime mostCongestion"> 15 </div>
+          <div className="predictCongestionTime notCongestion"> 16 </div>
+        </div>
       </div>
     </div>
   );

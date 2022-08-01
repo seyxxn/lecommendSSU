@@ -394,7 +394,7 @@ BUTTON
 
 /* 셀렉트 박스 */
 select {
-  width: 15vw;
+  width: 25vw;
   padding: 5px;
   margin: 5px;
   border: 1px solid #999;
@@ -459,6 +459,14 @@ select::-ms-expand {
 
 @media screen and (max-width: 767px) {
   /* 모바일 */
+
+  .main {
+    width: 80vw;
+    margin: auto;
+    display: block;
+    word-break: keep-all;
+  }
+
   .menuList {
     display: none;
   }
@@ -474,6 +482,32 @@ select::-ms-expand {
     line-height: 1.5em;
     word-break: keep-all;
   }
+
+  .logoAndMenu {
+    width: 80vw;
+  }
+
+  .footerBox {
+    width: 80vw;
+  }
+
+  /* 수정 */
+  .predictCongestionTime-container {
+    margin-top: 20px;
+    margin-bottom: 20vh;
+  }
+
+  .predictCongestionTime {
+    font-size: 10px;
+  }
+
+  .serviceButton {
+    width: 80vw;
+  }
+
+  .serviceButton2 {
+    width: 80vw;
+  }
 }
 
 .date {
@@ -482,15 +516,21 @@ select::-ms-expand {
   font-weight: 700;
 }
 
+.predictCongestionTime-container {
+  display: flex;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
 .predictCongestionTime {
-  display: inline;
   margin: 0 auto;
-  padding-left: 5px;
   text-align: center;
   justify-content: center;
-  margin-top: 50px;
+
+  margin-top: 30px;
   height: 80px;
-  line-height: 100px;
+  line-height: 80px;
+
   font-style: normal;
   font-weight: 1000;
   font-size: 8vw;
@@ -501,8 +541,6 @@ select::-ms-expand {
 }
 
 .mostCongestion {
-  background: linear-gradient(90deg, #da1912 39.85%, #ff9021 60.53%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ff1919;
+  font-size: 10vw;
 }
