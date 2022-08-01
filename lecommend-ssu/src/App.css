@@ -394,7 +394,7 @@ BUTTON
 
 /* 셀렉트 박스 */
 select {
-  width: 25vw;
+  width: 15vw;
   padding: 5px;
   margin: 5px;
   border: 1px solid #999;
@@ -507,6 +507,17 @@ select::-ms-expand {
 
   .serviceButton2 {
     width: 80vw;
+  }
+
+  .libImg {
+    width: 80vw;
+  }
+  .progress {
+    width: 80vw;
+  }
+
+  select {
+    width: 25vw;
   }
 }
 
