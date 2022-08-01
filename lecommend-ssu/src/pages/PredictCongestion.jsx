@@ -6,7 +6,7 @@ function predictCongestion() {
   // 오늘날의 년, 월, 일 데이터
   const day = d.getDate();
 
-  // 어제 날짜 구하기
+  // 내일 날짜 구하기
   const tomorrow = new Date(new Date().setDate(day + 1)).toLocaleDateString();
 
   return (
@@ -21,6 +21,10 @@ function predictCongestion() {
       <div className="content">
         <div className="content-title">내일의 혼잡도는?</div>
         <div className="content-title date">{tomorrow}</div>
+        <div className="predictCongestionTime notCongestion"> 13 </div>
+        <div className="predictCongestionTime notCongestion"> 14 </div>
+        <div className="predictCongestionTime mostCongestion"> 15 </div>
+        <div className="predictCongestionTime notCongestion"> 16 </div>
       </div>
     </div>
   );
