@@ -37,8 +37,11 @@ function Recommend() {
             value={selectedMajor}
             onChange={(item) => handleMajorClick(item.target.value)}
           >
+            <option value="" disabled="" hidden="">
+              학과
+            </option>
             {majorList.map((item) => (
-              <option>{item}</option>
+              <option value={item}>{item}</option>
             ))}
           </select>
         </div>
@@ -48,6 +51,9 @@ function Recommend() {
             value={selectedGrade}
             onChange={(item) => handleGradeClick(item.target.value)}
           >
+            <option value="" disabled="" hidden="">
+              학번
+            </option>
             {gradeList.map((item) => (
               <option>{item}</option>
             ))}

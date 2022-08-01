@@ -475,3 +475,7 @@ select::-ms-expand {
     word-break: keep-all;
   }
 }
+
+.date {
+  font-weight: 700;
+}
