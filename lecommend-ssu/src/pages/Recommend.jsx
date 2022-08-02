@@ -25,9 +25,17 @@ function Recommend() {
       <div className="subIntro">
         학과별 추천 자료와 학번별 추천자료, 학과·학번별 추천 자료를 보여줍니다.
         <br></br>
-        🔸학과별 추천 자료 - 도서 Top 10<br></br>
-        🔸학번별 추천 자료 - 도서 Top 10<br></br>
-        🔸학과·학번별 추천 자료 (리코멘슈 pick! 추천 자료) - 외부 데이터 활용
+        <br></br>
+        🔸학과별 대출 도서 TOP 10 - 해당 학과별 도서 대출 TOP 10 입니다.
+        <br></br>
+        🔸학번별 대출 도서 TOP 10 - 해당 학번별 도서 대출 TOP 10 입니다.
+        <br></br>
+        🔸학과·학번별 대출 도서 TOP 10- 해당 학과·학번별 도서 대출 TOP 10
+        입니다.
+        <br></br>
+        <br></br>
+        💡리코멘슈 pick! 추천 자료 - 대출 도서 TOP 10을 바탕으로 관련된 외부
+        도서를 추천해줍니다. (출처 : 도서별 상세정보 - 국립중앙도서관 제공)
         <br></br>
       </div>
       <div className="content">
@@ -62,9 +70,9 @@ function Recommend() {
       </div>
 
       <div className="recommend-top-10-box">
-        <div className="recommend-title">📘 학과별 추천 TOP 10</div>
+        <div className="recommend-title">📘 학과별 대출 도서 TOP 10</div>
         <div className="recommend-second-title">
-          <span>{selectedMajor}</span>의 추천 도서
+          <span>{selectedMajor}</span>의 대출 도서 TOP 10
         </div>
         <div className="recommend-content">
           {byMajorList
@@ -81,9 +89,9 @@ function Recommend() {
         </div>
       </div>
       <div className="recommend-top-10-box">
-        <div className="recommend-title">📗학번별 추천 TOP 10</div>
+        <div className="recommend-title">📗학번별 대출 도서 TOP 10</div>
         <div className="recommend-second-title">
-          <span>{selectedGrade}</span>의 추천 도서
+          <span>{selectedGrade}</span>의 대출 도서 TOP 10
         </div>
         <div className="recommend-content">
           {byGradeList
@@ -100,15 +108,13 @@ function Recommend() {
         </div>
       </div>
       <div className="recommend-top-10-box">
-        <div className="recommend-title">
-          📙 리코멘슈 pick! 학과·학번별 추천 TOP 10
-        </div>
+        <div className="recommend-title">📙 학과·학번별 대출 도서 TOP 10</div>
 
         <div className="recommend-second-title">
           <span>
             {selectedMajor} {selectedGrade}
           </span>
-          의 추천 도서
+          의 대출 도서 TOP 10
         </div>
         <div className="recommend-content">
           {byMajorAndGradeList
