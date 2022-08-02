@@ -44,13 +44,13 @@ function DayAndMonthCongestion() {
 
   /* 시간 수정 필요 */
   const dayCongestionTimeList = [
-    { value: "월요일", congestionTime: "12시" },
-    { value: "화요일", congestionTime: "12시" },
-    { value: "수요일", congestionTime: "12시" },
-    { value: "목요일", congestionTime: "12시" },
-    { value: "금요일", congestionTime: "12시" },
-    { value: "토요일", congestionTime: "12시" },
-    { value: "일요일", congestionTime: "12시" },
+    { value: "월요일", congestionTime: "12시-13시" },
+    { value: "화요일", congestionTime: "12시-13시" },
+    { value: "수요일", congestionTime: "12시-13시" },
+    { value: "목요일", congestionTime: "12시-13시" },
+    { value: "금요일", congestionTime: "12시-13시" },
+    { value: "토요일", congestionTime: "13시-14시" },
+    { value: "일요일", congestionTime: "13시-14시" },
   ];
 
   const dayList = [
@@ -68,9 +68,11 @@ function DayAndMonthCongestion() {
       <div className="main ">
         <div className="intro">요일·시간별 혼잡도</div>
         <div className="subIntro">
-          이전의 데이터를 바탕으로 <br></br>원하는 요일에 따른 시간별 혼잡도와
+          {/* 이전의 데이터를 바탕으로 <br></br> 원하는 요일에 따른 시간별 혼잡도와
           <br></br>
-          월에 따른 요일별 혼잡도를 알려줍니다.<br></br>
+          월에 따른 요일별 혼잡도를 알려줍니다.<br></br> */}
+          도서관 출입 데이터에서 방문일시를 활용하여 <br></br>
+          입·출입의 횟수가 가장 잦은 요일과 시간을 가장 혼잡하다고 나타냈다.
         </div>
         <div className="content">
           <div className="content-title">
