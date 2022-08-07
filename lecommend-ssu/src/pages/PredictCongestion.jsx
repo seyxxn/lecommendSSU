@@ -1,4 +1,5 @@
 import React from "react";
+import congestionClock from "../asserts/congestionClock.png";
 
 function predictCongestion() {
   const d = new Date();
@@ -22,10 +23,11 @@ function predictCongestion() {
         <div className="content-title">내일의 혼잡도는?</div>
         <div className="content-title date">{tomorrow}</div>
         <div className="predictCongestionTime-container">
-          <div className="predictCongestionTime notCongestion"> 13 </div>
-          <div className="predictCongestionTime notCongestion"> 14 </div>
-          <div className="predictCongestionTime mostCongestion"> 15 </div>
-          <div className="predictCongestionTime notCongestion"> 16 </div>
+          <img
+            className="predictCongestionTimeImg"
+            alt="도서관혼잡도예측시간-15시"
+            src={congestionClock}
+          ></img>
         </div>
       </div>
     </div>
