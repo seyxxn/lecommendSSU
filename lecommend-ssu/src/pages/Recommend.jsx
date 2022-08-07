@@ -10,6 +10,7 @@ import {
 function Recommend() {
   const [selectedMajor, setSelectedMajor] = useState("컴퓨터학부");
   const [selectedGrade, setSelectedGrade] = useState("20학번");
+  const [showLecommend, setShowLecommend] = useState(false);
 
   const handleMajorClick = (item) => {
     setSelectedMajor(item);
@@ -34,7 +35,7 @@ function Recommend() {
         입니다.
         <br></br>
         <br></br>
-        💡리코멘슈 pick! 추천 자료 - 대출 도서 TOP 10을 바탕으로 관련된 외부
+        💡리코멘슈 Pick! 추천 자료 - 대출 도서 TOP 10을 바탕으로 관련된 외부
         도서를 추천해줍니다. (출처 : 도서별 상세정보 - 국립중앙도서관 제공)
         <br></br>
       </div>
@@ -132,6 +133,23 @@ function Recommend() {
               </span>
             ))}
         </div>
+        <button
+          className="lecommendssu-pick-btn"
+          onClick={() => setShowLecommend(true)}
+        >
+          👉 리코멘슈 Pick! 도서 보러가기
+        </button>
+        {showLecommend && (
+          <div>
+            <div className="lecommendssu-pick recommend-second-title">
+              어떤 책과 관련된 외부 도서를 추천받고 싶은가요?
+            </div>
+            {/* <select> */}
+
+            {/* </select> */}
+            <div className="recommend-content">1. 이런책 </div>
+          </div>
+        )}
       </div>
     </div>
   );
