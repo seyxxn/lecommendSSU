@@ -5,6 +5,8 @@ import {
   byMajorList,
   byGradeList,
   byMajorAndGradeList,
+  lecommendssuBookList,
+  byLecommendssuPick,
 } from "../asserts/recommendList";
 
 function Recommend() {
@@ -12,12 +14,18 @@ function Recommend() {
   const [selectedGrade, setSelectedGrade] = useState("20학번");
   const [showLecommend, setShowLecommend] = useState(false);
 
+  const [selectLecommendssuBook, setSelectLecommendssuBook] = useState("");
+
   const handleMajorClick = (item) => {
     setSelectedMajor(item);
   };
 
   const handleGradeClick = (item) => {
     setSelectedGrade(item);
+  };
+
+  const handleLecommendssuClick = (item) => {
+    setSelectLecommendssuBook(item);
   };
 
   return (
@@ -137,17 +145,38 @@ function Recommend() {
           className="lecommendssu-pick-btn"
           onClick={() => setShowLecommend(true)}
         >
-          👉 리코멘슈 Pick! 도서 보러가기
+          👉 리코멘슈 Pick! 👈 <br></br> 도서 보러가기
         </button>
         {showLecommend && (
           <div>
             <div className="lecommendssu-pick recommend-second-title">
               어떤 책과 관련된 외부 도서를 추천받고 싶은가요?
             </div>
-            {/* <select> */}
-
-            {/* </select> */}
-            <div className="recommend-content">1. 이런책 </div>
+            <select
+              value={selectLecommendssuBook}
+              className="lecommendssu-pick-select-box"
+              onChange={(item) => handleLecommendssuClick(item.target.value)}
+            >
+              <option value="" disabled="" hidden="">
+                도서 선택
+              </option>
+              {lecommendssuBookList.map((item) => (
+                <option value={item}>{item}</option>
+              ))}
+            </select>
+            <div className="recommend-content lecommendssu-pick-content">
+              {byLecommendssuPick
+                .filter((item) => item.selectBook === selectLecommendssuBook)
+                .map((item) => (
+                  <span>
+                    {item.bookList.map((bookName, index) => (
+                      <div>
+                        TOP {index + 1} : {bookName}
+                      </div>
+                    ))}
+                  </span>
+                ))}
+            </div>
           </div>
         )}
       </div>

@@ -433,7 +433,6 @@ select::-ms-expand {
   color: #02a6cb;
 }
 .recommend-content {
-  margin: 2px;
   background-color: #f4f4f4;
   border-radius: 5px;
   font-size: calc(0.4em + 1vw);
@@ -448,7 +447,7 @@ select::-ms-expand {
 
 .lecommendssu-pick-btn {
   width: 40vw;
-  height: 5vh;
+  /* height: 5vh; */
   color: #fff;
   font-size: 1em;
   margin: auto;
@@ -463,6 +462,8 @@ select::-ms-expand {
 
   border: 3px solid #f8e6e0;
   color: #6e6e6e;
+
+  line-height: 25px;
 }
 
 .lecommendssu-pick-btn:hover {
@@ -480,6 +481,16 @@ select::-ms-expand {
 
 .lecommendssu-pick {
   text-align: center;
+}
+
+.lecommendssu-pick-select-box {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+
+.lecommendssu-pick-content {
+  margin-top: 30px;
 }
 
 /* 화면 축소 */

@@ -65,10 +65,44 @@ export const gradeList = [
   "21학번",
 ];
 
-// {
-//   major: "",
-//   bookList: ["", "", "", "", "", "", "", "", "", ""],
-// },
+// 리코멘슈 픽
+export const lecommendssuBookList = [
+  "(명품) Java programming",
+  "(윤성우의 열혈) C++ 프로그래밍",
+];
+
+export const byLecommendssuPick = [
+  {
+    selectBook: "(명품) Java programming",
+    bookList: [
+      "Java 소프트웨어 솔루션:프로그램 설계의 기초",
+      "(원리와 응용 중심으로 풀어 쓴) 자바2 프로그래밍=Java 2 programming",
+      "네트워크 프로그래밍=Network programing",
+      "Big Java",
+      "(명품) JAVA programming",
+      "프로그래밍 언어=Programming language",
+      "자바 5.0 프로그래밍:이클립스를 활용한 자바 A to Z",
+      "프로그래밍 언어론",
+      "(쉽게 배우는) 자료구조=Data structures",
+      "(C언어로 쉽게 풀어쓴) 자료 구조 =Data structures in C",
+    ],
+  },
+  {
+    selectBook: "(윤성우의 열혈) C++ 프로그래밍",
+    bookList: [
+      "윤성우의 열혈 C 프로그래밍",
+      "(윤성우의 열혈) TCPIP 소켓 프로그래밍",
+      "건축실무 프로그래밍 공학",
+      "(Visual C++로 구현한) C프로그래밍:Visual C++ 6.0",
+      "프로그래밍 언어=Programming language",
+      "(No.1) 공인중개사 :2차 입문강의 ",
+      "이산수학=Discrete mathematics",
+      "파이썬 웹 프로그래밍 :Django(장고)로 배우는 쉽고 빠른 웹 개발 ",
+      "네트워크 프로그래밍=Network programing",
+      "(속전속결) 액세스 2003",
+    ],
+  },
+];
 
 // 학과별 추천 리스트
 export const byMajorList = [
